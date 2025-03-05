@@ -12,7 +12,7 @@
 void send_int_data(SOCKET sock, int *data, size_t size) {
     size_t bytes_sent = 0;
     size_t total_size = size * sizeof(int);
-    char buffer[16];
+    char buffer[20];
 
     for (size_t i = 0; i < size; i++) {
         int value = htonl(data[i]);
